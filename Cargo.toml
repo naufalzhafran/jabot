@@ -1,0 +1,32 @@
+[package]
+name = "jabot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Telegram bot framework
+teloxide = { version = "0.13", features = ["macros"] }
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client for Anthropic API
+reqwest = { version = "0.12", features = ["json"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Config & env
+dotenvy = "0.15"
+toml = "0.8"
+
+# Concurrent hashmap for conversation state
+dashmap = "6"
+
+# Logging
+log = "0.4"
+pretty_env_logger = "0.5"
+
+# Error handling
+anyhow = "1"
